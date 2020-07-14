@@ -1,0 +1,36 @@
+{
+  "name": "sportsite",
+  "version": "1.0.0",
+  "description": "MERN stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimBg/SportSite.git"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "js",
+    "node"
+  ],
+  "author": "Timothy Bogatyryov <tbbt17971@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimBg/SportSite/issues"
+  },
+  "homepage": "https://github.com/TimBg/SportSite#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
