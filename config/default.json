@@ -1,4 +1,5 @@
 {
     "port": 5000,
-    "mongoUri": ""
+    "jwtSecret": "burning 7000 jesus zpalqm",
+    "mongoUri": "mongodb+srv://IsaacNetero:1qazzaq1@clustersport.pe4lh.azure.mongodb.net/app?retryWrites=true&w=majority"
 }
