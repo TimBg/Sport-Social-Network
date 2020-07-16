@@ -1,0 +1,15 @@
+span {
+    font-weight: 400;
+}
+
+.foot__item {
+    color: white;
+    padding: 7px 10px;
+}
+
+.foot__wrapper {
+    height: 36px;
+    background-color: black;
+    font-family: "Segoe UI";
+    position: "fixed";
+}
