@@ -1,8 +1,9 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import HeadReducer from './../reducers/HeadReducer';
 
 let Reducers = combineReducers({
-    brunch1: () => {return null},
+    HeadBrunch: HeadReducer,
     brunch2: () => {return null},
     brunch3: () => {return null},
 });
