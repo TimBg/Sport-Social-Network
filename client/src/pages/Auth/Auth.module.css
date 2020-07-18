@@ -1,0 +1,11 @@
+.auth__wrapper {
+    transition: 0.5s linear;
+}
+
+.auth__wrapper:hover {
+    color: black;
+}
+
+.row__wrapper {
+    margin-top: 50px;
+}

@@ -3,7 +3,7 @@ import s from './HeadButton.module.css';
 import {NavLink} from 'react-router-dom';
 
 function HeadButton(props) {
-    const category = ['/', '/about', 'faq', '/news', '/log', 'auth'];
+    const category = ['/', '/about', 'faq', '/news', '/log', 'reg'];
 
     return (
         <div className={s.head__item}>

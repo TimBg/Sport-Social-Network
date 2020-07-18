@@ -9,6 +9,8 @@ const Head = (props) => {
             <HeadButton store={props} numOfButton='1'/>
             <HeadButton store={props} numOfButton='2'/>
             <HeadButton store={props} numOfButton='3'/>
+        </div>
+        <div className={s.head__section}>
             <HeadButton store={props} numOfButton='4'/>
             <HeadButton store={props} numOfButton='5'/>
         </div>

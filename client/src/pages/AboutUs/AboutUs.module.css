@@ -1,0 +1,17 @@
+.row__wrapper {
+    margin-top: 50px;
+}
+
+.title__wrapper {
+    margin-left: 220px;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.text__wrapper {
+    font-size: 18.5px;
+}
+
+span {
+    color:#64ffda!important;
+}

@@ -3,8 +3,12 @@ import Footer from './Components/Foot/FootContainer';
 import Header from './Components/Head/HeadContainer';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Route} from 'react-router-dom';
-import AuthPage from './pages/AuthPage';
+import AuthPage from './pages/Auth/AuthPage';
+import AboutUsPage from './pages/AboutUs/AboutUsPage';
+import FAQPage from './pages/FAQ/FAQPage';
+import NewsPage from './pages/News/NewsPage';
 import s from './App.module.css';
+import 'materialize-css';
 
 function App(props) {
   const isAuthenticated = false;
@@ -29,7 +33,10 @@ function App(props) {
         <Provider store={props.store}>
           <Header store={props.store} />
           <div className={s.body__content_2}>
-            <Route path="/" render = {() => <AuthPage />} />
+            <Route path="/" exact render = {() => <AuthPage />} />
+            <Route path="/about" render = {() => <AboutUsPage />} />
+            <Route path="/faq" render = {() => <FAQPage />} />
+            <Route path="/news" render = {() => <NewsPage />} />
           </div>
           <Footer store={props.store} />
         </Provider>
