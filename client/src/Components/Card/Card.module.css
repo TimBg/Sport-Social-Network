@@ -1,0 +1,10 @@
+.row__wrapper {
+    width: 300px;
+    height: 130px;
+    margin: 18px;
+    padding: 0px!important;
+}
+
+a:hover {
+    background-color: black;
+}

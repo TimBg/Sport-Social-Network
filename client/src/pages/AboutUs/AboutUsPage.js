@@ -1,8 +1,17 @@
 import React from 'react';
 import s from './AboutUs.module.css';
+import Typed from 'react-typed';
 
 export default function AboutUsPage(props) {
     const classOfMotherDiv = 'row ' + s.row__wrapper;
+    const textLines = [
+        `SportStats is a company consisting of one employee - founder, 
+        chief developer, PR manager, chief designer. SportStats is the 
+        future of the entire sports industry. So far, this company only 
+        has a website, but in the future, a mobile application and a system 
+        for analyzing user indicators will be created. The system will use 
+        sophisticated algorithms to provide users with the best training programs.`
+    ];
 
     return (
     <div className={classOfMotherDiv}>
@@ -12,15 +21,10 @@ export default function AboutUsPage(props) {
                     <span className='card-title'>About Us</span>
                 </div>    
                 <div className={s.text__wrapper}>
-                    <span>SportStats is a company consisting of one employee — founder, 
-                    chief developer, PR manager, chief designer. SportStats is the
-                    future of the entire sports industry. So far, this company has
-                    only the website at its disposal, but in the future a mobile application
-                    will be created, a system for analyzing user indicators, which, using
-                    complex algorithms, will provide them with the best training programs.</span>
+                    <Typed strings={textLines} typeSpeed={30} />
                 </div>
             </div>       
-        </div>    
+        </div>   
     </div>
     );
 }
