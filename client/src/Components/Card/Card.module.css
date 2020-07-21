@@ -1,10 +1,139 @@
-.row__wrapper {
-    width: 300px;
+.card__wrapper0 {
+    background-color: #607d8b;
     height: 130px;
-    margin: 18px;
-    padding: 0px!important;
+    width: 260px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 28px;
+    border-radius: 0.5%;
+    padding: 15px 10px 25px 25px;
 }
 
-a:hover {
-    background-color: black;
+.card__wrapper1 {
+    background-color: #607d8b;
+    height: 130px;
+    width: 260px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-left: 28px;
+    border-radius: 0.5%;
+    padding: 15px 10px 25px 25px;
+}
+
+.card__wrapper2 {
+    background-color: #607d8b;
+    height: 130px;
+    width: 260px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-left: 28px;
+    border-radius: 0.5%;
+    padding: 15px 10px 25px 25px;
+}
+
+.card__wrapper3 {
+    background-color: #607d8b;
+    height: 130px;
+    width: 260px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 28px;
+    border-radius: 0.5%;
+    margin-bottom: 0px;
+    padding: 15px 10px 25px 25px;
+}
+
+.card__wrapper4 {
+    background-color: #607d8b;
+    height: 130px;
+    width: 260px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 28px;
+    border-radius: 0.5%;
+    margin-bottom: 0px;
+    padding: 15px 10px 25px 25px;
+}
+
+.card__wrapper10 {
+    background-color: #607d8b;
+    height: 290px;
+    width: 587px;
+    margin-left: 28px;
+    border-radius: 0.5%;
+    margin-top: 10px;
+    padding: 30px 40px 40px 50px;
+}
+
+.card__wrapper0:hover {
+    background-color: #ff6f00;
+    transition: 0.5s linear;
+}
+
+.card__wrapper1:hover {
+    background-color: #ff6f00;
+    transition: 0.5s linear;
+}
+
+.card__wrapper2:hover {
+    background-color: #ff6f00;
+    transition: 0.5s linear;
+}
+
+.card__wrapper3:hover {
+    background-color: #ff6f00;
+    transition: 0.5s linear;
+}
+
+.card__wrapper4:hover {
+    background-color: #ff6f00;
+    transition: 0.5s linear;
+}
+
+.card__wrapper10:hover {
+    background-color: #ff6f00;
+    transition: 0.5s linear;
+}
+
+.card__wrapper0 span {
+    color: black!important;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.card__wrapper1 span {
+    color: black!important;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.card__wrapper2 span {
+    color: black!important;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.card__wrapper3 span {
+    color: black!important;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.card__wrapper4 span {
+    color: black!important;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.card__wrapper10 span {
+    color: black!important;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    font-weight: 400;
 }

@@ -13,7 +13,7 @@ export default function AuthPage(props) {
                         <span className="card-title">Frequently Asked Questions</span>
                     </div>
                     <div>
-                        <ol class={s.rectangle}>
+                        <ol className={s.rectangle}>
                             <li><a href="#">Does the site have an improved version
                                 of training analysis? — Yes there is. 
                                 It can be purchased for $ 10 a month.

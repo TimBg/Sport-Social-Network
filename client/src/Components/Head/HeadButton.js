@@ -8,7 +8,9 @@ function HeadButton(props) {
     return (
         <div className={s.head__item}>
             <NavLink to={category[props.numOfButton]}>
-                {props.store.Headings[props.numOfButton]}
+                <div className={s.HeadButton}>
+                    {props.store.Headings[props.numOfButton]}
+                </div>
             </NavLink>
         </div>
     );

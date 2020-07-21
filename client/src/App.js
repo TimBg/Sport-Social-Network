@@ -36,7 +36,7 @@ function App(props) {
             <Route path="/" exact render = {() => <AuthPage />} />
             <Route path="/about" render = {() => <AboutUsPage />} />
             <Route path="/faq" render = {() => <FAQPage />} />
-            <Route path="/news" render = {() => <NewsPage />} />
+            <Route path="/news" render = {() => <NewsPage store={props.store} />}/>
           </div>
           <Footer store={props.store} />
         </Provider>

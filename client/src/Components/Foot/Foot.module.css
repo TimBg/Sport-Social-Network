@@ -3,7 +3,7 @@ span {
 }
 
 .foot__item {
-    color: white;
+    color: white!important;
     padding: 7px 10px;
 }
 

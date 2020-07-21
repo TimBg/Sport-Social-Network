@@ -1,3 +1,9 @@
 .head__item {
     padding: 10px 15px;
 }
+
+.HeadButton:hover {
+    color: #64ffda;
+    background-color: black;
+    transition: 0.5s linear;
+}

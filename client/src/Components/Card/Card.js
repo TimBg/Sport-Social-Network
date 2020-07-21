@@ -2,21 +2,32 @@ import React from 'react';
 import s from './Card.module.css';
 
 export default function Card(props) {
+    let classOffCard = "";
+
+    if(props.positionOfCard === "0") {
+        classOffCard = s.card__wrapper0;
+    } else if(props.positionOfCard === "1") {
+        classOffCard = s.card__wrapper1;
+    } else if(props.positionOfCard === "2") {
+        classOffCard = s.card__wrapper2;
+    } else if(props.positionOfCard === "3") {
+        classOffCard = s.card__wrapper3;
+    } else if(props.positionOfCard === "4") {
+        classOffCard = s.card__wrapper4;
+    } else if(props.positionOfCard === "10") {
+        classOffCard = s.card__wrapper10;
+    } 
+
     return (
-        <div class={s.row__wrapper}>
-            <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                <a href="#">
-                    <div class="card-action">
-                        <span>NewsNewsNewsNewsNews
-                        NewsNewsNewsNewsNewsNews
-                        NewsNewsNewsNewsNewsNewsNews
-                        NewsNewsNewsNewsNewsNews
-                        </span>
-                    </div>
-                </a>
+        <div>
+            <a href="#">
+                <div className={classOffCard}>
+                    <span>
+                        Lennox Lewis lists Evander Holyfield as his 
+                        ‘toughest opponent’ ahead of Mike Tyson.      
+                    </span>
                 </div>
-            </div>
-      </div>
+            </a>
+        </div>
     );
 }

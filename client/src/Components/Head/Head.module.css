@@ -5,10 +5,6 @@ a {
     transition: 0.5s linear
 }
 
-a:hover {
-    color: #64ffda;
-}
-
 .head__wrapper {
     display: flex;
     height: 72px;
@@ -21,4 +17,10 @@ a:hover {
     align-items: center;
     padding: 30px 50px;
     font-family: "Segoe UI";
+}
+
+.head__logo {
+    padding: 10px 15px;
+    margin-top: 9px;
+    margin-left: 10px;
 }
