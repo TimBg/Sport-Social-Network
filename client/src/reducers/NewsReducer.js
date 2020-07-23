@@ -4,7 +4,7 @@ let _ = require('lodash');
 
 let initialState = {
     newsTitles: new Array(40).join('0').split('').map((x, i) => i),
-    newsTexts: []
+    textOfNewsPage: ['123124124124124', '23423423423424','0000000000000', '232', '5','6','7','8','9','10']
 };
 
 let NewsReducer = (state = initialState, action) => {

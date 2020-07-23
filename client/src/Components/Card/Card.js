@@ -23,8 +23,7 @@ export default function Card(props) {
             <a href="#">
                 <div className={classOffCard}>
                     <span>
-                        Lennox Lewis lists Evander Holyfield as his 
-                        ‘toughest opponent’ ahead of Mike Tyson.      
+                        {props.store.textOfNewsPage[props.pageOfNews]} 
                     </span>
                 </div>
             </a>
