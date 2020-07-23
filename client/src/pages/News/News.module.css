@@ -30,10 +30,11 @@
 }
 
 .page_button__wrapper {
-    margin-left: 10px;
+    margin-left: 18.5px;
 }
 
 .mother__page_button__wrapper {
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 63px;
 }

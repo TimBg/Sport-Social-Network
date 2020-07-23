@@ -17,13 +17,13 @@ export default function Card(props) {
     } else if(props.positionOfCard === "10") {
         classOffCard = s.card__wrapper10;
     } 
-
+    console.log(props.store);
     return (
         <div>
             <a href="#">
                 <div className={classOffCard}>
                     <span>
-                        {props.store.textOfNewsPage[props.pageOfNews]} 
+                        {props.textOfNewsPage[props.pageOfNews]} 
                     </span>
                 </div>
             </a>

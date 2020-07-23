@@ -5,11 +5,22 @@ import CardContainer from './../../Components/Card/CardContainer';
 export default function NewsPage(props) {
     let [page, setPage] = useState(0);
 
-    const editPage = (numOfPage) => {
+    const editPage = (e, numOfPage) => {
+        debugger;
+        console.log(e, numOfPage);
         setPage(numOfPage);
     }
 
     return (<>
+        <div className={s.mother__page_button__wrapper}>
+            {   new Array(11).join('0').split('').map((x, i) => {
+                    return (<span 
+                            onClick={(e) => editPage(e, i)}
+                            className={s.page_button__wrapper}>{i+1}
+                        </span>)
+                })
+            }    
+        </div>
         <div className={s.main__news__wrapper}>
             <div className={s.line__wrapper}>
                 <div className={s.line__wrapper1}>
@@ -51,15 +62,6 @@ export default function NewsPage(props) {
                 </div>
             </div>
         </div> 
-        <div className={s.mother__page_button__wrapper}>
-            {   new Array(11).join('0').split('').map((x, i) => {
-                    return <span 
-                            onClick={(e) => editPage(e, i)}
-                            className={s.page_button__wrapper}>{i+1}
-                        </span>
-                })
-            }    
-        </div>
         </>
     );
 }
