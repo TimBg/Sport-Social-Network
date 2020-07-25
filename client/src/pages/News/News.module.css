@@ -33,6 +33,12 @@
     margin-left: 18.5px;
 }
 
+.actual_page_button__wrapper {
+    margin-left: 18.5px;
+    color: red!important;
+    transition: 0s linear;
+}
+
 .mother__page_button__wrapper {
     text-align: right;
     margin-top: 20px;

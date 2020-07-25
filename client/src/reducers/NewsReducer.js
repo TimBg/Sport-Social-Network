@@ -1,4 +1,4 @@
-import { getSportNews } from '../API/api';
+import qwert from '../API/api';
 
 let _ = require('lodash');
 
@@ -21,7 +21,7 @@ let NewsReducer = (state = initialState, action) => {
         case 'SET_NEWS_TEXTS': 
         {
             let newState = _.cloneDeep(state);
-            newState.newsTitles = action.articles.map(x => x.content);
+            newState.newsTitles = action.articles;
             stateCopy = newState;
         }; return stateCopy;
         default:
@@ -47,15 +47,16 @@ export const setNewsTexts = (articles) => {
     }
 }
 
-export const getNewsThunkCreator = () => {
+export const getNewsThunkCreator = (e) => {
     /*return (dispatch) => {
         getSportNews().then(response => {
             dispatch(setNewsTitles(response.articles));   
             dispatch(setNewsTexts(response.articles));              
         })
     }*/
-    let arr = new Array(50).join('0').split('').map((x, i) => (i+100));
     return (dispatch) => {
-        dispatch(setNewsTitles(arr));              
+        qwert().then(response => {
+            dispatch(setNewsTexts(response));
+        })
     }
 }

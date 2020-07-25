@@ -4,9 +4,9 @@ import Header from './Components/Head/HeadContainer';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 import AuthPage from './pages/Auth/AuthPage';
-import AboutUsPage from './pages/AboutUs/AboutUsPage';
-import FAQPage from './pages/FAQ/FAQPage';
-import NewsPage from './pages/News/NewsPage';
+import AboutUsContainer from './pages/AboutUs/AboutUsContainer';
+import FAQContainer from './pages/FAQ/FAQContainer';
+import NewsContainer from './pages/News/NewsContainer';
 import s from './App.module.css';
 import 'materialize-css';
 
@@ -34,9 +34,9 @@ function App(props) {
           <Header store={props.store} />
           <div className={s.body__content_2}>
             <Route path="/" exact render = {() => <AuthPage />} />
-            <Route path="/about" render = {() => <AboutUsPage />} />
-            <Route path="/faq" render = {() => <FAQPage />} />
-            <Route path="/news" render = {() => <NewsPage store={props.store} />}/>
+            <Route path="/about" render = {() => <AboutUsContainer />} />
+            <Route path="/faq" render = {() => <FAQContainer />} />
+            <Route path="/news" render = {() => <NewsContainer store={props.store} />}/>
           </div>
           <Footer store={props.store} />
         </Provider>

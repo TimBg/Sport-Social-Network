@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
 import Card from './Card';
-import {getNewsThunkCreator} from './../../reducers/NewsReducer';
 
 const mapStateToProps = (state) => {
     let textOfNewsPage = state.NewsBrunch.textOfNewsPage;
@@ -10,6 +9,6 @@ const mapStateToProps = (state) => {
     };
 }
 
-let Compose = connect(mapStateToProps, {getNewsThunkCreator})(Card);
+let CardContainer = connect(mapStateToProps, {})(Card);
 
-export default Compose;
+export default CardContainer;

@@ -1,23 +1,23 @@
 import React, {useState} from 'react';
+import {NavLink} from 'react-router-dom';
 import s from './News.module.css';
-import CardContainer from './../../Components/Card/CardContainer';
+import CardContainer from './Card/CardContainer';
 
 export default function NewsPage(props) {
     let [page, setPage] = useState(0);
 
     const editPage = (e, numOfPage) => {
-        debugger;
-        console.log(e, numOfPage);
         setPage(numOfPage);
     }
-
     return (<>
         <div className={s.mother__page_button__wrapper}>
             {   new Array(11).join('0').split('').map((x, i) => {
-                    return (<span 
+                    return (<NavLink
+                            to="#"
                             onClick={(e) => editPage(e, i)}
-                            className={s.page_button__wrapper}>{i+1}
-                        </span>)
+                            className={i === page ? s.actual_page_button__wrapper : s.page_button__wrapper}
+                            >{i+1}
+                            </NavLink>)
                 })
             }    
         </div>

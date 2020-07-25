@@ -7,7 +7,7 @@ const User = require('../models/User');
 const router = Router();
 
 router.post(
-    '/register', 
+    '/', 
     [
         check('email', 'Incorrect email').isEmail(),
         check('password', 'Minimum password length 8').isLength({min: 8})
