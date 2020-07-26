@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const bcrypt = require('bcryptjs');
-const jws = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const config = require('config');
 const {check, validationResult} = require('express-validator');
 const User = require('../models/User');
@@ -44,7 +44,7 @@ router.post(
 
 
 router.post(
-    '/login', 
+    '/log', 
     [
         check('email', 'Enter your email').normalizeEmail().isEmail(),
         check('password', 'Enter your password').exists()

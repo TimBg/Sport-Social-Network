@@ -9,6 +9,10 @@
     flex: 1;
 }
 
+.particles__wrapper{
+    position:absolute!important;
+}
+
 span {
     color: white;
 }
