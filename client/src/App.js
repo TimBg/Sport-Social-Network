@@ -9,6 +9,7 @@ import LoginPage from './pages/Auth/LoginPage';
 import AboutUsContainer from './pages/AboutUs/AboutUsContainer';
 import FAQContainer from './pages/FAQ/FAQContainer';
 import NewsContainer from './pages/News/NewsContainer';
+import MainUserContainer from './pages/MainUser/MainUserContainer';
 import {AuthContext} from './context/AuthContext';
 import {useAuth} from './hooks/auth.hook';
 
@@ -25,9 +26,9 @@ function App(props) {
         <BrowserRouter>
         <AuthContext.Provider value ={{token, login, logout, userId}}>
           <div className={s.body__content_1}>
-            <Route path="/q" render = {() => (<div onClick={logout}>logout</div>)} />
+            <Route path="/" render = {() => (<MainUserContainer logoutAttr={logout} store={props.store}/>)} />
             <Route path="/w" render = {() => (<div>w</div>)} />
-            <Route path="/e/:id" render = {() => (<div>e</div>)} />
+            <Route path="/e" render = {() => (<div>e</div>)} />
           </div>
           </AuthContext.Provider> 
         </BrowserRouter>
