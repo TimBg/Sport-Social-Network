@@ -16,6 +16,7 @@
 
 .global__body {
     padding-bottom: 0px;
+    overflow: hidden;
 }
 
 .global__body_first {

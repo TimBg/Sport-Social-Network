@@ -44,9 +44,9 @@ function App(props) {
           <Header store={props.store} />
           <div className={cn(s.global__body, s.global__body_second)}>
             <Route path="/" exact render = {() => <AuthPage />} />
-            <Route path="/about" render = {() => <AboutUsContainer />} />
-            <Route path="/faq" render = {() => <FAQContainer />} />
-            <Route path="/news" render = {() => <NewsContainer store={props.store} />}/>
+            <Route path="/about" exact render = {() => <AboutUsContainer />} />
+            <Route path="/faq" exact render = {() => <FAQContainer />} />
+            <Route path="/news" exact render = {() => <NewsContainer store={props.store} />}/>
             <Route path="/log" exact render = {() => <LoginPage />} />
             <Route path="/reg" exact render = {() => <AuthPage />} />
           </div>

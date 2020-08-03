@@ -1,50 +1,63 @@
-.auth-button {
-    transition: 0.5s linear;
+.auth-button:hover {
+    color: black;
+}
+
+.row-wrapper__btn_wrapper {
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.row-wrapper_auth {
+    margin-top: 50px;
+}
+
+.row-wrapper__card {
+    position: relative;
+    margin: .5rem 0 1rem 0;
+    background-color: #fff;
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius: 2px;
+}
+
+.row-wrapper__card_blue-grey {
+    background-color: #607d8b!important;
+}
+
+.row-wrapper__btn {
     text-decoration: none;
     color: #fff;
     background-color: #26a69a;
     text-align: center;
     letter-spacing: .5px;
-    border-width: 0px;
-    min-width: 80px;
-    min-height: 30px;
-    margin-left: 200px;
-    margin-right: 150px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
 }
 
-.auth-button:hover {
-    color: black;
+.row-wrapper__btn_wrapper { 
+    transition: 0.5s linear; 
+} 
+
+.row-wrapper__btn_wrapper:hover { 
+    color: black; 
 }
 
-.auth-wrapper {
-    margin-top: 50px;
-    overflow: hidden;
+.row-wrapper__btn_grey-lighten-1 {
+    background-color: #bdbdbd!important;
 }
 
-.auth-wrapper__child {
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-    min-height: 260px;
-    background-color: #546e7a;
-    border-radius: 0.4%;
+.row-wrapper__card-action {
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    position: relative;
+    padding: 16px 24px;
 }
 
-.auth-wrapper__head {
-    text-align: center;
-
-}
-
-.auth-wrapper__title {
-    font-size: 24px;
-    font-weight: 100px;
-}
-
-
-.auth-wrapper__input:nth-child(1) {
-    margin-top: 30px;
-}
-
-.auth-wrapper__input:nth-child(2) {
-    margin-top: 30px;
+.row-wrapper__input-field {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

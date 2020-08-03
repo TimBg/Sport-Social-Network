@@ -1,8 +1,3 @@
-.row-wrapper_faq {
-    margin-top: 100px!important;
-    overflow: hidden;
-}
-
 li {
     margin: 25px;
 }
@@ -31,7 +26,7 @@ li {
 }
     
 .row-wrapper__rectangle a:hover {
-    background: #546e7a!important;
+    background: #37474f!important;
 }       
 
 .row-wrapper__rectangle a:before {
@@ -61,5 +56,14 @@ li {
 
 .row-wrapper__rectangle a:hover:after {
     left: -.5em!important;
-    border-left-color: #546e7a!important;
+    border-left-color: #37474f!important;
+}
+
+.row-wrapper__top-edit {
+    margin-top: -50px!important;
+}
+
+
+.row-wrapper__top-edit-wrapper {
+    position: relative;
 }

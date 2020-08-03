@@ -14,7 +14,7 @@ export default function AboutUsPage(props) {
     ];
 
     return (
-    <div className={s["row-wrapper"]}>
+    <div className={cn(s["row-wrapper"], s["row-wrapper_about-us"])}>
         <div className={cn(s["row-wrapper__col"], s["row-wrapper__col_s12"], s["row-wrapper__col_m8"])}>
             <div className={cn(s["row-wrapper__card-content"], s["row-wrapper__card-content_white-text"])}>
                 <div className={s["row-wrapper__card-wrapper"]}>
@@ -23,8 +23,8 @@ export default function AboutUsPage(props) {
                 <div className={s["row-wrapper__text-wrapper"]}>
                     <Typed strings={textLines} typeSpeed={30} />
                 </div>
-            </div>       
-        </div>   
+            </div>    
+        </div>
     </div>
     );
 }
