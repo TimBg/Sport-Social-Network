@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './AboutUs.module.css';
 import Typed from 'react-typed';
+import cn from 'classnames';
 
 export default function AboutUsPage(props) {
-    const classOfMotherDiv = 'row ' + s.row__wrapper;
     const textLines = [
         `SportStats is a company consisting of one employee - founder, 
         chief developer, PR manager, chief designer. SportStats is the 
@@ -14,13 +14,13 @@ export default function AboutUsPage(props) {
     ];
 
     return (
-    <div className={classOfMotherDiv}>
-        <div className="col s6 offset-s3">
-            <div className='card-content white-text'>
-                <div className={s.title__wrapper}>
-                    <span className='card-title'>About Us</span>
+    <div className={s["row-wrapper"]}>
+        <div className={cn(s["row-wrapper__col"], s["row-wrapper__col_s12"], s["row-wrapper__col_m8"])}>
+            <div className={cn(s["row-wrapper__card-content"], s["row-wrapper__card-content_white-text"])}>
+                <div className={s["row-wrapper__card-wrapper"]}>
+                    <span className={s["row-wrapper__card-title"]}>About Us</span>
                 </div>    
-                <div className={s.text__wrapper}>
+                <div className={s["row-wrapper__text-wrapper"]}>
                     <Typed strings={textLines} typeSpeed={30} />
                 </div>
             </div>       

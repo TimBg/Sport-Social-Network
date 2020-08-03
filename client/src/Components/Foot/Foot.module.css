@@ -11,5 +11,8 @@ span {
     height: 36px;
     background-color: black;
     font-family: "Segoe UI";
-    position: "fixed";
+    position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }

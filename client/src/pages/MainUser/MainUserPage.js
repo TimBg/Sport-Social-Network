@@ -4,7 +4,9 @@ import s from './MainUser.module.css';
 export default function MainUserPage(props) {
     return (
         <div onClick={props.logoutAttr}>
-            <span>Main Page of User</span>
+            <section>qwe</section>
+            <section>rty</section>
+            <section>yui</section>
         </div>
     );
 }

@@ -1,1 +1,15 @@
-@import "~materialize-css/dist/css/materialize.min.css";
+body {
+    margin:0px;
+    min-height: 100%;
+}
+
+html {
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: 0.5s linear;
+}

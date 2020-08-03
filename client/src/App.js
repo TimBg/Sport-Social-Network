@@ -13,8 +13,8 @@ import MainUserContainer from './pages/MainUser/MainUserContainer';
 import {AuthContext} from './context/AuthContext';
 import {useAuth} from './hooks/auth.hook';
 
+import cn from 'classnames';
 import s from './App.module.css';
-import 'materialize-css';
 
 function App(props) {
   const {token, login, logout, userId} = useAuth();
@@ -22,27 +22,27 @@ function App(props) {
 
   if(isAuthenticated) {
     return (
-      <div className={s.global__field_1}>
+      <div className={cn(s.global, s.global_user)}>
         <BrowserRouter>
         <AuthContext.Provider value ={{token, login, logout, userId}}>
-          <div className={s.body__content_1}>
+          <div className={cn(s.global__body, s.global__body_first)}>
             <Route path="/" render = {() => (<MainUserContainer logoutAttr={logout} store={props.store}/>)} />
             <Route path="/w" render = {() => (<div>w</div>)} />
             <Route path="/e" render = {() => (<div>e</div>)} />
           </div>
-          </AuthContext.Provider> 
+        </AuthContext.Provider> 
         </BrowserRouter>
       </div>  
     );
   }
 
   return (
-    <div className={s.global__field_2}>
+    <div className={cn(s.global, s.global_visitor)}>
       <BrowserRouter>
         <AuthContext.Provider value ={{token, login, logout, userId}}>
         <Provider store={props.store}>
           <Header store={props.store} />
-          <div className={s.body__content_2}>
+          <div className={cn(s.global__body, s.global__body_second)}>
             <Route path="/" exact render = {() => <AuthPage />} />
             <Route path="/about" render = {() => <AboutUsContainer />} />
             <Route path="/faq" render = {() => <FAQContainer />} />

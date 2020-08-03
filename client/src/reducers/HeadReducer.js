@@ -1,5 +1,6 @@
 let initialState = {
-    Headings: ['SportStats', 'About Us', 'FAQ', 'News', 'Log In', 'Sign Up' ]
+    Headings: ['SportStats', 'About Us', 'FAQ', 'News', 'Log In', 'Sign Up' ],
+    Categories: ['/', '/about', '/faq', '/news', '/log', '/reg']
 };
 
 let HeadReducer = (state = initialState, action) => {

@@ -1,9 +1,13 @@
-.head__item {
-    padding: 10px 15px;
+.link-wrapper_header_user {
+    margin-right: 30px;
 }
 
-.HeadButton:hover {
+.link-wrapper_header_user:nth-child(7) {
+    margin-right: 30px;
+    text-align: right;
+}
+
+.text-link:hover {
     color: #64ffda;
-    background-color: black;
     transition: 0.5s linear;
 }

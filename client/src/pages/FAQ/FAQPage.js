@@ -1,19 +1,22 @@
 import React from 'react';
 import s from './FAQ.module.css';
+import q from './../AboutUs/AboutUs.module.css';
+import cn from 'classnames'; 
 
 export default function AuthPage(props) {
-    const classOfMotherDiv = 'row ' + s.row__wrapper;
-    const classOfTitle = 'card-content white-text ' + s.title__wrapper;
-
     return (
-        <div className={classOfMotherDiv}>
-            <div className="col s6 offset-s3">
-                <div className="card blue-grey" style={{height:440}}>
-                    <div className={classOfTitle}>
-                        <span className="card-title">Frequently Asked Questions</span>
+        <div className={cn(q["row-wrapper"], ["row-wrapper_faq"])}>
+            <div className={cn(q["row-wrapper__col"], q["row-wrapper__col_s12"], q["row-wrapper__col_m8"])}>
+                <div className={s["row-wrapper__card"], s["row-wrapper__card_blue-grey"]} style={{height:440}}>
+                    <div className={cn(
+                                        q["row-wrapper__card-content"], 
+                                        q["row-wrapper__card-content_white-text"], 
+                                        s["row-wrapper__card-content_title-wrapper"]
+                    )}>
+                        <span className={q["row-wrapper__card-title"]}>Frequently Asked Questions</span>
                     </div>
                     <div>
-                        <ol className={s.rectangle}>
+                        <ol className={s["row-wrapper__rectangle"]}>
                             <li><a href="#">Does the site have an improved version
                                 of training analysis? — Yes there is. 
                                 It can be purchased for $ 10 a month.

@@ -1,18 +1,27 @@
-.global__field_2 {
+.global {
+
+}
+
+.global_user {
+
+}
+
+.global_visitor {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background-color: #263238;
+    position: relative;
+	min-height: 100vh;
 }
 
-.body__content_2 {
-    flex: 1;
+.global__body {
+    padding-bottom: 0px;
 }
 
-.particles__wrapper{
-    position:absolute!important;
+.global__body_first {
+
 }
 
-span {
-    color: white;
+.global__body_second {
+
 }
