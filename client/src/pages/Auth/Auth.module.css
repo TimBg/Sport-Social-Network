@@ -32,21 +32,36 @@
     background-color: #26a69a;
     text-align: center;
     letter-spacing: .5px;
-    -webkit-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
     cursor: pointer;
+    outline: 0;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    bottom:48px;
 }
 
 .row-wrapper__btn_wrapper { 
-    transition: 0.5s linear; 
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
 } 
 
 .row-wrapper__btn_wrapper:hover { 
     color: black; 
-}
-
-.row-wrapper__btn_grey-lighten-1 {
-    background-color: #bdbdbd!important;
+    background-color: #009688;
 }
 
 .row-wrapper__card-action {
@@ -54,10 +69,54 @@
     border-top: 1px solid rgba(160,160,160,0.2);
     position: relative;
     padding: 16px 24px;
+    height: 40px;
 }
 
 .row-wrapper__input-field {
     position: relative;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: rgba(0,0,0,0.87);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    box-sizing: inherit;
+}
+
+.row-wrapper__input-field input:focus {
+    border-bottom: 1px solid black;
+}
+
+.row-wrapper__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #37474f;
+    border-radius: 0;
+    outline: none;
+    height: 1.5rem;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+    overflow: visible;
+    line-height: 3rem;
+    cursor: text;
+}
+
+.row-wrapper__label {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: .2s opacity ease-out, .2s color ease-out;
+}
+
+.row-wrapper__input-field input::placeholder {
+    color: black;
+    font-size: 0.9em;
 }

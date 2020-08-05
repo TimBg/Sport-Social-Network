@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 import Footer from './Components/Foot/FootContainer';
 import Header from './Components/Head/HeadContainer';
+import MainPage from './pages/MainPage/MainPage';
 import AuthPage from './pages/Auth/AuthPage';
 import LoginPage from './pages/Auth/LoginPage';
 import AboutUsContainer from './pages/AboutUs/AboutUsContainer';
@@ -43,7 +44,7 @@ function App(props) {
         <Provider store={props.store}>
           <Header store={props.store} />
           <div className={cn(s.global__body, s.global__body_second)}>
-            <Route path="/" exact render = {() => <AuthPage />} />
+            <Route path="/" exact render = {() => <MainPage />} />
             <Route path="/about" exact render = {() => <AboutUsContainer />} />
             <Route path="/faq" exact render = {() => <FAQContainer />} />
             <Route path="/news" exact render = {() => <NewsContainer store={props.store} />}/>

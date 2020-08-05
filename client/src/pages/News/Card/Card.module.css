@@ -1,137 +1,113 @@
-.card__wrapper0 {
+.simple-card-wrapper {
+    background-color: #607d8b;
+    width: 281px;
+    height: 137px;
+    margin: 0px;
+    border-radius: 0.5%;
+}
+
+.card-wrapper0 {
     background-color: #607d8b;
     height: 130px;
-    width: 260px;
-    margin: 10px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    margin-left: 28px;
+    width: 281px;
+    margin: 0px;
+    margin-top:5px;
+    margin-left: 5px;
     border-radius: 0.5%;
     padding: 15px 10px 25px 25px;
 }
 
-.card__wrapper1 {
-    background-color: #607d8b;
-    height: 130px;
-    width: 260px;
-    margin: 10px;
-    margin-top: 10px;
-    margin-left: 28px;
-    border-radius: 0.5%;
+.card-wrapper1 {
+    margin-bottom:4px;
+    margin-left: 5px;
     padding: 15px 10px 25px 25px;
 }
 
-.card__wrapper2 {
-    background-color: #607d8b;
-    height: 130px;
-    width: 260px;
-    margin: 10px;
-    margin-top: 10px;
-    margin-left: 28px;
-    border-radius: 0.5%;
+.card-wrapper2 {
+    margin-bottom:4px;
+    margin-left: 5px;
     padding: 15px 10px 25px 25px;
 }
 
-.card__wrapper3 {
-    background-color: #607d8b;
-    height: 130px;
-    width: 260px;
-    margin: 10px;
+.card-wrapper3 {
     margin-top: 20px;
-    margin-left: 28px;
-    border-radius: 0.5%;
+    margin-left: 5px;
     margin-bottom: 0px;
     padding: 15px 10px 25px 25px;
+    position: absolute;
+    right:12px;
+    bottom: 0px;
 }
 
-.card__wrapper4 {
-    background-color: #607d8b;
-    height: 130px;
-    width: 260px;
-    margin: 10px;
+.card-wrapper4 {
     margin-top: 20px;
-    margin-left: 28px;
-    border-radius: 0.5%;
+    margin-left: 5px;
     margin-bottom: 0px;
     padding: 15px 10px 25px 25px;
+    position: absolute;
+    right:333px;
+    bottom: 0px;
 }
 
-.card__wrapper10 {
+.card-wrapper5 {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    padding: 15px 10px 25px 25px;
+    position: absolute;
+    right:654px;
+    bottom: 0px;
+}
+
+.card-wrapper6 {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    padding: 15px 10px 25px 25px;
+    position: absolute;
+    right:975px;
+    bottom: 0px;
+}
+
+.card-wrapper10 {
     background-color: #607d8b;
     height: 290px;
-    width: 587px;
-    margin-left: 28px;
+    width: 547px;
+    margin-left: 5px;
     border-radius: 0.5%;
-    margin-top: 10px;
     padding: 30px 40px 40px 50px;
 }
 
-.card__wrapper0:hover {
+.simple-card-wrapper:hover {
     background-color: #ff6f00;
-    transition: 0.5s linear;
+    transition: 0.2s;
 }
 
-.card__wrapper1:hover {
+.card-wrapper0:hover {
     background-color: #ff6f00;
-    transition: 0.5s linear;
+    transition: 0.2s;
 }
 
-.card__wrapper2:hover {
+.card-wrapper10:hover {
     background-color: #ff6f00;
-    transition: 0.5s linear;
+    transition: 0.2s;
 }
 
-.card__wrapper3:hover {
-    background-color: #ff6f00;
-    transition: 0.5s linear;
-}
-
-.card__wrapper4:hover {
-    background-color: #ff6f00;
-    transition: 0.5s linear;
-}
-
-.card__wrapper10:hover {
-    background-color: #ff6f00;
-    transition: 0.5s linear;
-}
-
-.card__wrapper0 span {
+.simple-card-wrapper span {
     color: black!important;
     font-family: 'Segoe UI';
     font-size: 17px;
     font-weight: 400;
 }
 
-.card__wrapper1 span {
+.card-wrapper0 span {
     color: black!important;
     font-family: 'Segoe UI';
     font-size: 17px;
     font-weight: 400;
 }
 
-.card__wrapper2 span {
-    color: black!important;
-    font-family: 'Segoe UI';
-    font-size: 17px;
-    font-weight: 400;
-}
-
-.card__wrapper3 span {
-    color: black!important;
-    font-family: 'Segoe UI';
-    font-size: 17px;
-    font-weight: 400;
-}
-
-.card__wrapper4 span {
-    color: black!important;
-    font-family: 'Segoe UI';
-    font-size: 17px;
-    font-weight: 400;
-}
-
-.card__wrapper10 span {
+.card-wrapper10 span {
     color: black!important;
     font-family: 'Segoe UI';
     font-size: 17px;

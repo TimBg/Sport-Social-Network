@@ -50,8 +50,12 @@ const AuthFactory = (urlPrefix, nameOfProcess, nameOfButton) => {
                                         type="text" 
                                         name="email" 
                                         onChange={changeHandler}
+                                        className={s["row-wrapper__input"]}
                                         />
-                                    <label htmlFor="email"></label>
+                                    <label 
+                                        htmlFor="email"
+                                        className={s["row-wrapper__label"]}
+                                    ></label>
                                 </div>
                                 <div className={s["row-wrapper__input-field"]}>
                                     <input 
@@ -60,16 +64,19 @@ const AuthFactory = (urlPrefix, nameOfProcess, nameOfButton) => {
                                         type="password" 
                                         name="password" 
                                         onChange={changeHandler}
+                                        className={s["row-wrapper__input"]}
                                         />
-                                    <label htmlFor="email"></label>
+                                    <label 
+                                        htmlFor="email"
+                                        className={s["row-wrapper__label"]}
+                                    ></label>
                                 </div>
                             </div>
                         </div>
                         <div className={s["row-wrapper__card-action"]}>
                             <button 
                                 className={cn(
-                                                s["row-wrapper__btn"], 
-                                                s["row-wrapper__btn_grey-lighten-1"], 
+                                                s["row-wrapper__btn"],
                                                 s["row-wrapper__btn_wrapper"]
                                 )} 
                                 onClick={logOrAuthHandler}
