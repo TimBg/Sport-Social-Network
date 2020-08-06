@@ -11,6 +11,7 @@ import AboutUsContainer from './pages/AboutUs/AboutUsContainer';
 import FAQContainer from './pages/FAQ/FAQContainer';
 import NewsContainer from './pages/News/NewsContainer';
 import MainUserContainer from './pages/MainUser/MainUserContainer';
+import NewsExemplarContainer from './Components/NewsExemplar/NewsExemplarContainer';
 import {AuthContext} from './context/AuthContext';
 import {useAuth} from './hooks/auth.hook';
 
@@ -26,11 +27,13 @@ function App(props) {
       <div className={cn(s.global, s.global_user)}>
         <BrowserRouter>
         <AuthContext.Provider value ={{token, login, logout, userId}}>
+          <Header logoutAttr={logout} isAuth={true} store={props.store} />
           <div className={cn(s.global__body, s.global__body_first)}>
-            <Route path="/" render = {() => (<MainUserContainer logoutAttr={logout} store={props.store}/>)} />
+            <Route path="/user/:id" render = {() => (<MainUserContainer store={props.store}/>)} />
             <Route path="/w" render = {() => (<div>w</div>)} />
             <Route path="/e" render = {() => (<div>e</div>)} />
           </div>
+          <Footer store={props.store} />
         </AuthContext.Provider> 
         </BrowserRouter>
       </div>  
@@ -42,7 +45,7 @@ function App(props) {
       <BrowserRouter>
         <AuthContext.Provider value ={{token, login, logout, userId}}>
         <Provider store={props.store}>
-          <Header store={props.store} />
+          <Header isAuth={false}store={props.store} />
           <div className={cn(s.global__body, s.global__body_second)}>
             <Route path="/" exact render = {() => <MainPage />} />
             <Route path="/about" exact render = {() => <AboutUsContainer />} />
@@ -50,6 +53,7 @@ function App(props) {
             <Route path="/news" exact render = {() => <NewsContainer store={props.store} />}/>
             <Route path="/log" exact render = {() => <LoginPage />} />
             <Route path="/reg" exact render = {() => <AuthPage />} />
+            <Route path="/news/:id" exact render = {() => <NewsExemplarContainer />} />
           </div>
           <Footer store={props.store} />
         </Provider>

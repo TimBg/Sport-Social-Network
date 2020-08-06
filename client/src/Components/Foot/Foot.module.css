@@ -2,12 +2,12 @@ span {
     font-weight: 400;
 }
 
-.foot__item {
+.foot-wrapper__item {
     color: white!important;
     padding: 7px 10px;
 }
 
-.foot__wrapper {
+.foot-wrapper {
     height: 36px;
     background-color: black;
     font-family: "Segoe UI";

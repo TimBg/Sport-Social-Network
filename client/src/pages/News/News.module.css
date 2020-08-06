@@ -1,18 +1,11 @@
-.news-wrapper__first-section {
+.news-wrapper__section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
 }
 
-.news-wrapper__second-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-}
-
-.news-wrapper__third-section {
+.news-wrapper__section_third {
     display: flex;  
     flex-wrap: wrap;
     justify-content: center;

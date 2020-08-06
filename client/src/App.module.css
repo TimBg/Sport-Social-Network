@@ -3,7 +3,8 @@
 }
 
 .global_user {
-
+    background-color: #263238;
+    min-height: 100vh;
 }
 
 .global_visitor {

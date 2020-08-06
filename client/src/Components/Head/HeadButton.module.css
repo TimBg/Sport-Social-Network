@@ -1,13 +1,14 @@
-.link-wrapper_header_user {
-    margin-right: 30px;
+.link-wrapper-header-user {
+    padding: 23px;
+    margin-bottom: 1px;
 }
 
-.link-wrapper_header_user:nth-child(7) {
-    margin-right: 30px;
-    text-align: right;
-}
-
-.text-link:hover {
+.link-wrapper-header-user:hover {
+    border: 2px solid #64ffda;;
     color: #64ffda;
-    transition: 0.5s linear;
+    transition: 0s none;
+}
+
+.link-wrapper-header-user:nth-child(7) {
+    text-align: right;
 }

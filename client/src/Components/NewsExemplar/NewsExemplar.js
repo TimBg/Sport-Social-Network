@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './NewsExemplar.module.css';
 
-export default function NewsExemplar(props) {
+const NewsExemplar = (props) => {
    
     return (
         <div>
@@ -9,3 +9,5 @@ export default function NewsExemplar(props) {
         </div>
     );
 }
+
+export default NewsExemplar;
