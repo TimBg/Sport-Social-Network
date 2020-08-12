@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
-import {AuthPage} from './pages/AuthPage';
+import {AuthPage} from './pages/AuthPage.tsx';
 
 const useRoutes = isAuthenticated => {
     if(isAuthenticated) { 
