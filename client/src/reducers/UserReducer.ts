@@ -1,11 +1,15 @@
+import { initialStateHeadType } from "./HeadReducer";
+
 let _ = require('lodash');
 
 let initialState = {
 
 };
 
-let UserReducer = (state = initialState, action: any) => {
-    let stateCopy;
+type initialStateUserType = {}
+
+let UserReducer = (state = initialState, action: any): initialStateUserType => {
+    let stateCopy = {};
         
     switch (action.type) {
         case 'SET_qwertt': 

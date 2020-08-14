@@ -14,11 +14,13 @@ import MainUserContainer from './pages/MainUser/MainUserContainer';
 import NewsExemplarContainer from './Components/NewsExemplar/NewsExemplarContainer';
 import {AuthContext} from './context/AuthContext';
 import {useAuth} from './hooks/auth.hook';
+import {StoreWrapperType} from './redux/store';
 
 import cn from 'classnames';
 import s from './App.module.css';
 
-function App(props : any) {
+
+const App: React.FC<StoreWrapperType> = ({store}): JSX.Element => {
   const {token, login, logout, userId} = useAuth();
   const isAuthenticated : boolean = !!token;
 
@@ -27,13 +29,13 @@ function App(props : any) {
       <div className={cn(s.global, s.global_user)}>
         <BrowserRouter>
         <AuthContext.Provider value={{token, login, logout, userId}}>
-          <Header logoutAttr={logout} isAuth={true} store={props.store} />
+          <Header logoutAttr={logout} isAuth={true} />
           <div className={cn(s.global__body, s.global__body_first)}>
-            <Route path="/user/:id" render = {() => (<MainUserContainer store={props.store}/>)} />
+            <Route path="/user/:id" render = {() => (<MainUserContainer />)} />
             <Route path="/w" render = {() => (<div>w</div>)} />
             <Route path="/e" render = {() => (<div>e</div>)} />
           </div>
-          <Footer {...props} />
+          <Footer  />
         </AuthContext.Provider> 
         </BrowserRouter>
       </div>  
@@ -44,18 +46,18 @@ function App(props : any) {
     <div className={cn(s.global, s.global_visitor)}>
       <BrowserRouter>
         <AuthContext.Provider value ={{token, login, logout, userId}}>
-        <Provider store={props.store}>
-          <Header isAuth={false}store={props.store} />
+        <Provider store={store}>
+          <Header isAuth={false} />
           <div className={cn(s.global__body, s.global__body_second)}>
             <Route path="/" exact render = {() => <MainPage />} />
             <Route path="/about" exact render = {() => <AboutUsContainer />} />
             <Route path="/faq" exact render = {() => <FAQContainer />} />
-            <Route path="/news" exact render = {() => <NewsContainer store={props.store} />}/>
+            <Route path="/news" exact render = {() => <NewsContainer />}/>
             <Route path="/log" exact render = {() => <LoginPage />} />
             <Route path="/reg" exact render = {() => <AuthPage />} />
             <Route path="/news/:id" exact render = {() => <NewsExemplarContainer />} />
           </div>
-          <Footer {...props} />
+          <Footer />
         </Provider>
         </AuthContext.Provider>
       </BrowserRouter>

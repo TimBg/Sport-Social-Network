@@ -1,12 +1,27 @@
 import {useState, useCallback, useEffect} from 'react';
 
-const storageName = 'userData';
+const storageName: string = 'userData';
 
-export const useAuth = () => {
-    const [token, setToken] = useState(null);
-    const [userId, setUserId] = useState(null);
+export type Login = (jwtToken: string, id: number) => void;
+export type Logout = () => void;
 
-    const login = useCallback((jwtToken, id) => {
+type UserData = {
+    token: string
+    userId: number
+}
+
+export type ReturnHook = {
+    login: Login
+    logout: Logout
+    token: string | null
+    userId: number | null
+}
+
+export const useAuth = (): ReturnHook => {
+    const [token, setToken] = useState<string | null>(null);
+    const [userId, setUserId] = useState<number | null>(null);
+
+    const login: Login = useCallback((jwtToken: string, id: number) => {
         setToken(jwtToken);
         setUserId(id);
 
@@ -15,19 +30,20 @@ export const useAuth = () => {
         }));
     }, []);
 
-    const logout = useCallback(() => {
+    const logout: Logout = useCallback(() => {
         setToken(null);
         setUserId(null);
         localStorage.removeItem(storageName);
     }, []);
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem(storageName));
+        const data: UserData = JSON.parse(localStorage.getItem(storageName)!)
         
         if(data && data.token) {
             login(data.token, data.userId);
         }
     }, [login]);
     
+
     return {login, logout, token, userId};
 }

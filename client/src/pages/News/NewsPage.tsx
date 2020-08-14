@@ -3,61 +3,63 @@ import {NavLink} from 'react-router-dom';
 import s from './News.module.css';
 import CardContainer from './Card/CardContainer';
 import cn from 'classnames';
+import {MainReturn} from './NewsContainer';
 
-export default function NewsPage(props: any) {
-    let [page, setPage] = useState(0);
+const NewsPage: React.FC<MainReturn> = function({store}): JSX.Element {
+    let [page, setPage] = useState<number>(0);
 
-    const editPage = (e: Object, numOfPage: number) => {
+    const editPage = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, numOfPage: number) => {
         setPage(numOfPage);
     }
+
     return (<>
-        <div className={s["news-button-wrapper"]}>
-            {   new Array(11).join('0').split('').map((x, i) => {
+        <div className={s['news-button-wrapper']}>
+            {   new Array(11).join('0').split('').map((x: string, i: number) => {
                     return (<NavLink
-                            to="#"
+                            to='#'
                             onClick={(e) => editPage(e, i)}
-                            className={i === page ? s["news-button-wrapper__active"] : s["news-button-wrapper__normal"]}
+                            className={i === page ? s['news-button-wrapper__active'] : s['news-button-wrapper__normal']}
                             >{i+1}
                             </NavLink>)
                 })
             }    
         </div>
-        <div className={s["news-wrapper"]}>
-            <div className={s["news-wrapper__cards"]}>
+        <div className={s['news-wrapper']}>
+            <div className={s['news-wrapper__cards']}>
                 {/* Set to lowerDiv, when problem will be solved - onClick={props.getNewsThunkCreator}*/}
-                <div className={s["news-wrapper__section"]}>
-                    <CardContainer pageOfNews={page} positionOfCard={"10"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"1"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"2"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"3"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"4"} store={props.store}/>
+                <div className={s['news-wrapper__section']}>
+                    <CardContainer pageOfNews={page} positionOfCard={'10'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'1'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'2'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'3'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'4'} />
                 </div>
-                <div className={s["news-wrapper__section"]}>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
+                <div className={s['news-wrapper__section']}>
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
                 </div>
-                <div className={cn(s["news-wrapper__section"], s["news-wrapper__section_third"])}>
-                    <CardContainer pageOfNews={page} positionOfCard={"2"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"1"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"10"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"5"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"6"} store={props.store}/>
+                <div className={cn(s['news-wrapper__section'], s['news-wrapper__section_third'])}>
+                    <CardContainer pageOfNews={page} positionOfCard={'2'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'1'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'10'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'5'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'6'} />
                 </div>
-                <div className={s["news-wrapper__section"]}>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
-                    <CardContainer pageOfNews={page} positionOfCard={"0"} store={props.store}/>
+                <div className={s['news-wrapper__section']}>
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
+                    <CardContainer pageOfNews={page} positionOfCard={'0'} />
                 </div>
                 <br/>
                 <br/>
@@ -66,3 +68,5 @@ export default function NewsPage(props: any) {
         </>
     );
 }
+
+export default NewsPage;

@@ -1,4 +1,4 @@
-import {getSportNewsAPI} from '../API/api.js';
+import {getSportNewsAPI} from '../API/api';
 
 let _ = require('lodash');
 

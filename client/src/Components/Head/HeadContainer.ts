@@ -1,13 +1,27 @@
 import Head from './Head';
 import {connect} from 'react-redux';
+import {RootStateType} from './../../redux/store';
+import {Logout} from '../../hooks/auth.hook';
+import {initialStateHeadType} from './../../reducers/HeadReducer';
 
-const mapStateToProps = (state: any) => {
+type MSTPReturn = initialStateHeadType;
+
+type MDTPReturn = {};
+
+type OWNReturn = {
+    isAuth: boolean
+    logoutAttr?: Logout
+}
+
+export type MainReturn = MSTPReturn & MDTPReturn & OWNReturn;
+
+const mapStateToProps = (state: RootStateType): MSTPReturn => {
     return {
-        Headings: state.HeadBrunch.Headings,
-        Categories: state.HeadBrunch.Categories
+        Headings: state.HeadBranch.Headings,
+        Categories: state.HeadBranch.Categories
     };
 }
 
-const HeadContainer = connect(mapStateToProps, {})(Head);
+const HeadContainer = connect<MSTPReturn, MDTPReturn, OWNReturn, RootStateType>(mapStateToProps, {})(Head);
 
 export default HeadContainer;

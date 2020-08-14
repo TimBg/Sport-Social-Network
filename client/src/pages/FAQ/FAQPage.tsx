@@ -2,9 +2,10 @@ import React from 'react';
 import s from './FAQ.module.css';
 import q from './../AboutUs/AboutUs.module.css';
 import w from './../Auth/Auth.module.css';
+import {MainReturn} from './FAQContainer';
 import cn from 'classnames'; 
 
-export default function AuthPage(props: any) {
+const FAQPage: React.FC<MainReturn> = (): JSX.Element => {
     return (
         <div className={cn(q["row-wrapper"], s["row-wrapper_faq"])}>
             <div className={cn(q["row-wrapper__col"], q["row-wrapper__col_s12"], q["row-wrapper__col_m8"])}>
@@ -40,3 +41,5 @@ export default function AuthPage(props: any) {
         </div>
     );
 }
+
+export default FAQPage;

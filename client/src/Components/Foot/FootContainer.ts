@@ -1,10 +1,19 @@
 import Foot from './Foot';
 import {connect} from 'react-redux';
+import {RootStateType} from './../../redux/store';
 
-const mapStateToProps = (state: any): Object => {
+type MSTPReturn = {};
+
+type MDTPReturn = {};
+
+type OWNReturn = {};
+
+export type MainReturn = MSTPReturn & MDTPReturn & OWNReturn;
+
+const mapStateToProps = (state: RootStateType): MSTPReturn => {
     return {};
 }
 
-const FootContainer = connect(mapStateToProps, {})(Foot)
+const FootContainer = connect<MSTPReturn, MDTPReturn, OWNReturn, RootStateType>(mapStateToProps, {})(Foot)
 
 export default FootContainer;

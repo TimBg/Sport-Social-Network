@@ -1,10 +1,19 @@
 import MainUserPage from './MainUserPage';
 import {connect} from 'react-redux';
+import {RootStateType} from './../../redux/store';
 
-const mapStateToProps = (state: any): Object => {
+type MSTPReturn = {};
+
+type MDTPReturn = {};
+
+type OWNReturn = {};
+
+export type MainReturn = MSTPReturn & MDTPReturn & OWNReturn;
+
+const mapStateToProps = (state: RootStateType): MSTPReturn => {
     return {};
 }
 
-const MainUserContainer = connect(mapStateToProps, {})(MainUserPage);
+const MainUserContainer = connect<MSTPReturn, MDTPReturn, OWNReturn, RootStateType>(mapStateToProps, {})(MainUserPage);
 
 export default MainUserContainer;

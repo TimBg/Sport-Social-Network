@@ -1,37 +1,40 @@
 import React from 'react';
 import s from './Card.module.css';
 import cn from 'classnames';
+import {MainReturn} from './CardContainer';
 
-export default function Card(props: any) {
+const Card: React.FC<MainReturn> = ({ textOfNewsPage, pageOfNews, positionOfCard }): JSX.Element => {
     let classOffCard = '';
 
-    if(props.positionOfCard === "0") {
+    if(positionOfCard === "0") {
         classOffCard = s['card-wrapper0'];
-    } else if(props.positionOfCard === "1") {
+    } else if(positionOfCard === "1") {
         classOffCard = cn(s['simple-card-wrapper'], s['card-wrapper1']);
-    } else if(props.positionOfCard === "2") {
+    } else if(positionOfCard === "2") {
         classOffCard = cn(s['simple-card-wrapper'], s['card-wrapper2']);
-    } else if(props.positionOfCard === "3") {
+    } else if(positionOfCard === "3") {
         classOffCard = cn(s['simple-card-wrapper'], s['card-wrapper3']);
-    } else if(props.positionOfCard === "4") {
+    } else if(positionOfCard === "4") {
         classOffCard = cn(s['simple-card-wrapper'], s['card-wrapper4']);
-    } else if(props.positionOfCard === "10") {
+    } else if(positionOfCard === "10") {
         classOffCard = s['card-wrapper10'];
-    } else if(props.positionOfCard === "5") {
+    } else if(positionOfCard === "5") {
         classOffCard = cn(s['simple-card-wrapper'], s['card-wrapper5']);
-    } else if(props.positionOfCard === "6") {
+    } else if(positionOfCard === "6") {
         classOffCard = cn(s['simple-card-wrapper'], s['card-wrapper6']);
     } 
 
     return (
         <div>
-            <a href="#">
-                <div className={classOffCard}>
+            <a href='#'>
+                <div className={ classOffCard }>
                     <span>
-                        {props.textOfNewsPage[props.pageOfNews]} 
+                        { textOfNewsPage[pageOfNews] } 
                     </span>
                 </div>
             </a>
         </div>
     );
 }
+
+export default Card;

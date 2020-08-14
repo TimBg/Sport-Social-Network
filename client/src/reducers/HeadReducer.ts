@@ -1,4 +1,4 @@
-type initialStateHeadType = {
+export type initialStateHeadType = {
     Headings: Array<string>
     Categories: Array<string>
 }

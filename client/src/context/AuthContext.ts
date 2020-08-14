@@ -1,10 +1,15 @@
 import {createContext} from 'react';
 
-function noop(iwtToken: any, id: any) {}
+import {ReturnHook} from './../hooks/auth.hook';
 
-export const AuthContext = createContext({
+function login(iwtToken: string, id: number): void {}
+function logout(): void {}
+
+const BodyOfContext: ReturnHook = {
     token: null,
     userId: null,
-    login: noop,
-    logout: noop
-})
+    login: login,
+    logout: logout
+}
+
+export const AuthContext = createContext(BodyOfContext);
