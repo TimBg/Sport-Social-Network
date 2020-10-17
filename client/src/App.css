@@ -1,0 +1,22 @@
+.global_user {
+  background-color: #263238;
+  min-height: 100vh;
+}
+
+.global_visitor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #263238;
+  position: relative;
+  min-height: 100vh;
+}
+
+.global__body {
+  padding-bottom: 0px;
+  overflow: hidden;
+}

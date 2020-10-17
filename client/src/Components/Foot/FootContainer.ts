@@ -1,12 +1,14 @@
 import Foot from './Foot';
 import {connect} from 'react-redux';
-import {RootStateType} from './../../redux/store';
+import {RootStateType, StoreType} from './../../redux/store';
 
 type MSTPReturn = {};
 
 type MDTPReturn = {};
 
-type OWNReturn = {};
+type OWNReturn = {
+    store: StoreType
+};
 
 export type MainReturn = MSTPReturn & MDTPReturn & OWNReturn;
 

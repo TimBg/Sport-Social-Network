@@ -1,0 +1,67 @@
+.simple-card-wrapper {
+    background-color: #607d8b;
+    width: 281px;
+    height: 137px;
+    border-radius: 0.5%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    &:hover {
+        background-color: #ff6f00;
+        transition: 0.2s;
+    }
+    span {
+        color: black !important;
+        font-family: "Segoe UI";
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+.card-wrapper0 {
+    background-color: #607d8b;
+    height: 130px;
+    width: 281px;
+    border-radius: 0.5%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: #ff6f00;
+        transition: 0.2s;
+    }
+    span {
+        color: black !important;
+        font-family: "Segoe UI";
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+.card-wrapper10 {
+    background-color: #607d8b;
+    height: 284px;
+    width: 572px;
+    border-radius: 0.5%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    &:hover {
+        background-color: #ff6f00;
+        transition: 0.2s;
+    }
+    span {
+        color: black !important;
+        font-family: "Segoe UI";
+        font-size: 17px;
+        font-weight: 400;
+    }
+}

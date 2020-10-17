@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './HeadButton.module.css';
-import {NavLink} from 'react-router-dom';
-import {initialStateHeadType} from './../../reducers/HeadReducer';
+import './HeadButton.css';
+import { NavLink } from 'react-router-dom';
+import { initialStateHeadType } from './../../reducers/HeadReducer';
 
 type MSTPReturn = initialStateHeadType;
 
@@ -11,15 +11,15 @@ type HeadButtonOwnType = {
 
 type HeadButtonType = HeadButtonOwnType & MSTPReturn;
 
-const HeadButton: React.FC<HeadButtonType> = ({Headings, Categories, numOfButton}): JSX.Element => {
-    const editNumOfButton = Number(numOfButton); 
-    
+const HeadButton: React.FC<HeadButtonType> = ({ Headings, Categories, numOfButton }): JSX.Element => {
+    const editNumOfButton = Number(numOfButton);
+
     return (
-            <NavLink className={s["link-wrapper-header-user"]} to={Categories[editNumOfButton]}>
-                <div>
-                    {Headings[editNumOfButton]}
-                </div>
-            </NavLink>
+        <NavLink className='link-wrapper-header-user' to={Categories[editNumOfButton]}>
+            <div>
+                {Headings[editNumOfButton]}
+            </div>
+        </NavLink>
     );
 }
 

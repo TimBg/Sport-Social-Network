@@ -1,0 +1,23 @@
+.main-user {
+    width: 100%;
+}
+
+.main-user__wrapper {
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.main-user__img {
+    max-height: 300px;
+    max-width: 280px;
+}
+
+.side-menu {
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+}
