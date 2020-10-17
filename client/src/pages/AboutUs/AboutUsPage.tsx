@@ -1,8 +1,7 @@
 import React from 'react';
-import s from './AboutUs.module.css';
+import './AboutUs.css';
 import Typed from 'react-typed';
-import cn from 'classnames';
-import {MainReturn} from './AboutUsContainer';
+import { MainReturn } from './AboutUsContainer';
 
 const AboutUsPage: React.FC<MainReturn> = (): JSX.Element => {
     const textLines: string[] = [
@@ -15,18 +14,18 @@ const AboutUsPage: React.FC<MainReturn> = (): JSX.Element => {
     ];
 
     return (
-    <div className={cn(s['row-wrapper'], s['row-wrapper_about-us'])}>
-        <div className={cn(s['row-wrapper__col'], s['row-wrapper__col_s12'], s['row-wrapper__col_m8'])}>
-            <div className={cn(s['row-wrapper__card-content'], s['row-wrapper__card-content_white-text'])}>
-                <div className={s['row-wrapper__card-wrapper']}>
-                    <span className={s['row-wrapper__card-title']}>About Us</span>
-                </div>    
-                <div className={s['row-wrapper__text-wrapper']}>
-                    <Typed strings={textLines} typeSpeed={30} />
+        <div className='row-wrapper row-wrapper_about-us'>
+            <div className='row-wrapper__col row-wrapper__col_s12 row-wrapper__col_m8'>
+                <div className='row-wrapper__card-content row-wrapper__card-content_white-text'>
+                    <div className='row-wrapper__card-wrapper'>
+                        <span className='row-wrapper__card-title'>About Us</span>
+                    </div>
+                    <div className='row-wrapper__text-wrapper'>
+                        <Typed strings={textLines} typeSpeed={30} />
+                    </div>
                 </div>
-            </div>    
+            </div>
         </div>
-    </div>
     );
 }
 

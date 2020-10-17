@@ -1,0 +1,19 @@
+span {
+  font-weight: 400;
+}
+
+.foot-wrapper__item {
+  color: white !important;
+  padding: 7px 10px;
+}
+
+.foot-wrapper {
+  height: 36px;
+  background-color: black;
+  font-family: "Segoe UI";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+}

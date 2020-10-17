@@ -1,6 +1,6 @@
 import React from 'react';
-import {Line as LineChart} from 'react-chartjs-2';
-import s from './LineChart.module.css';
+import { Line as LineChart } from 'react-chartjs-2';
+import './LineChart.css';
 
 const chartData = (): Object => {
     return {
@@ -15,8 +15,8 @@ const chartData = (): Object => {
                 pointStrokeColor: '#212121',
                 pointHighlightFill: '#212121',
                 pointHighlightStroke: '#212121',
-                pointBorderColor:'#212121',
-                pointBackgroundColor:'#212121',
+                pointBorderColor: '#212121',
+                pointBackgroundColor: '#212121',
                 pointRadius: '2.5',
                 data: [40, 20, 30, 5, 25, 20, 30],
             },
@@ -29,12 +29,13 @@ const chartData = (): Object => {
                 pointStrokeColor: '#212121',
                 pointHighlightFill: '#212121',
                 pointHighlightStroke: '#212121',
-                pointBorderColor:'#212121',
-                pointBackgroundColor:'#212121',
+                pointBorderColor: '#212121',
+                pointBackgroundColor: '#212121',
                 pointRadius: '2.5',
                 data: [40, 48, 56, 64, 72, 80, 90],
-            } 
-        ]}
+            }
+        ]
+    }
 }
 
 const options = {
@@ -52,11 +53,11 @@ const options = {
     datasetStroke: true,
     datasetStrokeWidth: 2,
     datasetFill: true,
-        legend: {
-            labels: {
-                fontColor: 'black'
-            }
-        },
+    legend: {
+        labels: {
+            fontColor: 'black'
+        }
+    },
     scales: {
         yAxes: [
             {
@@ -77,7 +78,7 @@ const styles = {
     graphContainer: {
         border: 'none',
         padding: '15px',
-        background:'rgba(96, 125, 139, 1)'
+        background: 'rgba(96, 125, 139, 1)'
     }
 }
 
@@ -86,7 +87,7 @@ type StateType = {
 }
 
 class LineChartComponent extends React.Component<any, StateType> {
-    
+
     constructor(props: any) {
         super(props);
         this.state = {
@@ -96,11 +97,11 @@ class LineChartComponent extends React.Component<any, StateType> {
 
     render() {
         return (
-            <div className={s['line-chart']} style={styles.graphContainer}>
-                <LineChart  data={this.state.data} 
-                            options={options}
-                            width={600} 
-                            height={250}/>
+            <div className='line-chart' style={styles.graphContainer}>
+                <LineChart data={this.state.data}
+                    options={options}
+                    width={600}
+                    height={250} />
             </div>
         )
     }

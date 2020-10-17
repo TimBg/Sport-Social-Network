@@ -1,29 +1,39 @@
-import { initialStateHeadType } from "./HeadReducer";
-
 let _ = require('lodash');
 
 let initialState = {
-
+    userImage: 'https://www.iconfinder.com/data/icons/man-user-human-person-business-profile-avatar/100/20A-1User-512.png',
 };
 
-type initialStateUserType = {}
+//Action types:
+const SET_USER_PHOTO = 'SET_USER_PHOTO';
 
-let UserReducer = (state = initialState, action: any): initialStateUserType => {
-    let stateCopy = {};
-        
+
+export type initialStateUserType = {
+    userImage: string | File
+};
+
+let UserReducer = (state: initialStateUserType = initialState, action: any): initialStateUserType => {
     switch (action.type) {
-        case 'SET_qwertt': 
-        {
-            
-        }; return stateCopy;
-        case 'ere': 
-        {
-            
-        }; return stateCopy;
-        default:
-            break;
+        case SET_USER_PHOTO:
+            return { ...state, userImage: action.photo };
     }
     return state;
 }
+
+
+
+export const editUserPhoto = (newPhoto: File): editUserPhotoType => {
+    return {
+        type: SET_USER_PHOTO,
+        photo: newPhoto
+    }
+}
+
+type editUserPhotoType = {
+    type: string,
+    photo: File
+}
+
+
 
 export default UserReducer;

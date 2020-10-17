@@ -1,0 +1,99 @@
+.simple-card-wrapper {
+  background-color: #607d8b;
+  width: 281px;
+  height: 137px;
+  border-radius: 0.5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.simple-card-wrapper:hover {
+  background-color: #ff6f00;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.simple-card-wrapper span {
+  color: black !important;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.card-wrapper0 {
+  background-color: #607d8b;
+  height: 130px;
+  width: 281px;
+  border-radius: 0.5%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-wrapper0:hover {
+  background-color: #ff6f00;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-wrapper0 span {
+  color: black !important;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.card-wrapper10 {
+  background-color: #607d8b;
+  height: 284px;
+  width: 572px;
+  border-radius: 0.5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-wrapper10:hover {
+  background-color: #ff6f00;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card-wrapper10 span {
+  color: black !important;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  font-weight: 400;
+}

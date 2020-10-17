@@ -10,12 +10,14 @@ let Reducers = combineReducers({
     UserBranch: UserReducer,
 });
 
-type RootReducerType = typeof Reducers;
-export type RootStateType = ReturnType<RootReducerType>;
-
 // @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(Reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
+
+export type RootReducerType = typeof Reducers;
+export type RootStateType = ReturnType<RootReducerType>;
+
+export type StoreType = typeof store;
 
 const StoreWrapper = {store: store};
 export type StoreWrapperType = typeof StoreWrapper;

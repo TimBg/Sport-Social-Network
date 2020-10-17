@@ -1,0 +1,15 @@
+.link-wrapper-header-user {
+  padding: 23px;
+  margin-bottom: 1px;
+}
+
+.link-wrapper-header-user:hover {
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  -webkit-transition: 0s none;
+  transition: 0s none;
+}
+
+.link-wrapper-header-user:nth-child(7) {
+  text-align: right;
+}
